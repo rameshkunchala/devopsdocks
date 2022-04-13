@@ -1,0 +1,2866 @@
+UNIX-- 1969.. Kenthomson and Dennis ritche at AT& T
+comme---1970...
+Guru@1515  gurusreeram8989@gmail.com
+
+UNIX---- Which is a comme--- Different falvours...of unix.
+SUNOS----  11.4 
+IBM-AIX---Webspe--7.3
+HP-UX---11
+NOVELL..  6.5 
+MACOS-----10.15.7---
+
+1990-- Linus Torvalds---student of  Helsinki, Finland--- LINUX---- is a clone of UNIX...
+RHEL--- 7.XXX(Maipo)---most of the organaization...
+UBANTU -- 21.10 
+FEDORA  -- 35
+centOs--7.9
+suse-- 15 
+----
+
+November 1985.  is the firse version of windows...
+
+https://www.javatpoint.com/linux-history
+
+
+Bourne	      ....sh
+AT&T(kourne)------ksh
+borun-----        bash
+                  CSH
+                  TCSH
+
+YUM
+it checks on local reporsitory if it did notfound it downloads from internest at respective places and then it install
+RPM---
+rpm package_name
+
+
+Differencies between UNIX and windows and linux and windows
+filesystem
+Architecture
+Instalition.
+
+RESOURCES:
+Command: a command is a executable program which written on C
+Internal commands: it deos not required resouces
+EXternal Commands: it required sources...
+
+
+root:x:0:0:root:/root:/bin/bash   each line contains 7 fileds...
+
+Loginname--- unique
+Encrypted password
+uid--unique id   ---0
+gid---group id...   0
+About user
+default working directory
+default working shell
+
+9 to 999 is for system managed accounts
+1000 to 19999  External accounst
+command_name --help 
+man commna_name
+
+XDG_SESSION_ID=2
+HOSTNAME=Rama.net
+SELINUX_ROLE_REQUESTED=
+TERM=xterm
+SHELL=/bin/bash
+HISTSIZE=1000
+SSH_CLIENT=192.168.0.103 49795 22
+SELINUX_USE_CURRENT_RANGE=
+OLDPWD=/
+SSH_TTY=/dev/pts/0
+QT_GRAPHICSSYSTEM_CHECKED=1
+USER=root
+LS_COLORS=rs=0
+MAIL=/var/spool/mail/root
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin
+PWD=/bin
+LANG=en_US.UTF-8
+SELINUX_LEVEL_REQUESTED=
+HISTCONTROL=ignoredups
+SHLVL=1
+HOME=/root
+LOGNAME=root
+SSH_CONNECTION=192.168.0.103 49795 192.168.0.105 22
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+XDG_RUNTIME_DIR=/run/user/0
+_=/usr/bin/env
+
+
+PATH:
+
+logname
+id
+help
+man
+env  only display system defined variables 
+set only display system defined variables + user defined varibales
+PATH
+echo
+$
+uname -a
+/etc/os-release
+/etc/passwd
+/etc/shadow
+/etc/shells
+
+NAME
+       echo - display a line of text
+
+SYNOPSIS
+       echo [SHORT-OPTION]... [STRING]...
+       echo LONG-OPTION
+
+DESCRIPTION
+       Echo the STRING(s) to standard output.
+
+       -n     do not output the trailing newline \n
+       -e     enable interpretation of backslash escapes \n
+       -E     disable interpretation of backslash escapes (default)
+       --help display this help and exit
+
+type---
+logname
+id
+uname   (-a)
+who/w 
+who -b
+who am i / whoami
+uptime
+last
+history it displays historical commands
+fc -l -- it display recently executed commands (maximum 15 to 20)
+echo
+PATH
+env
+set
+ip a
+clear/ctrl+L
+exit
+echo $0-- it displays currently being used shell
+$-- to access the value of varibale....
+echo $SHELL  it display defualt working shell
+ctrl+r--- recursive search..
+pwd
+pwd -P/L
+
+df  Disk Free
+du
+lsblk
+/etc/fstab
+iostat-- input output stati
+
+
+free -h
+vmstate
+
+No of cores 1
+load average: 0.00, 0.01, 0.05
+load average: 0.20, 0.40, 0.80
+load average: 1.80, 2.10, 0.90
+
+
+
+ping
+telnet  23
+ssh  22
+
+traceroute
+tcpdump
+netstat
+ifconfig -a
+ip a
+
+
+[root@Rama /]# df -h
+Filesystem               Size  Used Avail Use% Mounted on
+/dev/mapper/centos-root   16G  2.6G   14G  17% /
+devtmpfs                 910M     0  910M   0% /dev
+tmpfs                    921M     0  921M   0% /dev/shm
+tmpfs                    921M  8.5M  912M   1% /run
+tmpfs                    921M     0  921M   0% /sys/fs/cgroup
+/dev/sda1                497M  127M  370M  26% /boot
+tmpfs                    185M     0  185M   0% /run/user/0
+Any storage device stores data in the form of 0 or 1
+o
+0 or 1 we call it bits
+8 bits=1 Byte ~ 1 character on computer keyboard
+1024 bytes=1KB
+4KB=1block
+1024KB=1MB
+1024MB=1GB
+1024GB=1TB
+1024TB=1PB
+1024PB=1YB
+1024YB=1ZB
+1024ZB=1HB
+
+-d, --max-depth=N   
+
+
+[root@Rama ~]# top -c -n 1
+top - 10:10:50 up  1:18,  2 users,  load average: 0.00, 0.01, 0.05
+Tasks:  94 total,   2 running,  92 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.2 us,  0.5 sy,  0.0 ni, 98.9 id,  0.4 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem :  1884176 total,  1311016 free,   150772 used,   422388 buff/cache
+KiB Swap:  1888252 total,  1888252 free,        0 used.  1512064 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND
+    1 root      20   0  128220   6740   4000 S  0.0  0.4   0:02.13 /usr/lib/systemd/systemd --switched-root --system --deserialize 21
+    2 root      20   0       0      0      0 S  0.0  0.0   0:00.00 [kthreadd]
+    3 root      20   0       0      0      0 S  0.0  0.0   0:00.59 [ksoftirqd/0]
+    6 root      20   0       0      0      0 S  0.0  0.0   0:00.04 [kworker/u2:0]
+    7 root      rt   0       0      0      0 S  0.0  0.0   0:00.00 [migration/0]
+    8 root      20   0       0      0      0 S  0.0  0.0   0:00.00 [rcu_bh]
+
+Pinging www.google.com [142.250.182.68] with 100 bytes of data:
+Reply from 142.250.182.68: bytes=68 (sent 100) time=69ms TTL=116
+
+netstat -atp
+a--all
+t -- dont trim
+p --all process details
+
+File Releated commands/Operational commands:
+
+
+mkdir is a command....
+cd directory_name
+
+mkdir RAMA
+mkdir test1 testt2 test3 test4 test5 test6
+mkdir -p /root/RAMA/INDIA/AP/KADAPA/PLVD/CKPT/Chervucompalli
+mkdir -m 
+
+drwxr-xr-x. 2 root root  6 Feb  3 09:51 .  (Detelas of current)
+drwxr-xr-x. 3 root root 27 Feb  3 09:51 .. parent of current direct
+cd .. --it goes back to parent directory of current directory
+cd ../../../..
+cd /root/RAMA/INDIA/AP/KADAPA/PLVD/CKPT/Chervucompalli
+cd -  it switch to previously working directory
+cd/cd ~ it switch to default/home directory of user
+
+touch 
+
+M Modified Time
+A Accessed Time
+C Created  Time
+
+Bedeault touch mdified created date and Time.
+
+stat cdr.txt
+
+-t STAMP               use [[CC]YY]MMDDhhmm[.ss] instead of current time
+touch -a -t 2203261010.10 cdr.txt
+stat  cdr.txt
+touch -m -t 2203261010.10 cdr.txt
+touch -a -t 2203261010.10 cdr.txt
+stat  cdr.txt
+touch --help
+touch -m -t 2203261010.10 cdr.txt
+
+Inode: 
+
+cat 
+1. Display the contenet of file                    cat file_name file_name1 F2 f3 f4 .. fn
+2. Create a new file and copy data into that file  cat >file_name
+3. Appened data to existing file                   cat >>file_name
+
+> Special character
+rm
+ctrl+c
+ctrl+d
+ctrl+z
+
+ -n, --number             number all output lines
+ -v, --show-nonprinting   use ^ and M- notation, except for LFD and TAB
+
+cat file.txt  Relative Path
+cat /root/file.txt
+cat /root/INDIA/AP/KADAPA/PLVD/lower_orders_1.txt   absolute path 
+
+ls 
+-l long list format....it display list of files or directores in cureent or specified directory in assending oder.
+- it represtes File
+d represte directory
+l soft link file
+c Character speacial file
+b bootable file
+
+rw-r--r--
+maximum length of 1st  filed is 1
+maximum length of 2nd filed is 10
+first 3 characters---owner permission
+second 3             Group
+last 3               Other per
+sticky bit or ant other specicla per
+
+Read   You can read file...                    r, Wetghtage of 4
+Write     --- U can make modications on file   w,              2
+Execute   --- u can make use of file...        x,              1
+                                                               7
+Number of links to the file
+Owner of teh file
+Group fo the file
+SiZe of teh file
+Date 
+Time
+File_name
+
+
+
+
+-l
+-r revers order in long list format (DESC)
+-t
+
+ls -lrt
+-a hidden files
+
+ulimit -a
+
+
+rm --- we can able to remove fiel or directory
+-i  / Default
+-f  forcibilly
+-r --- recursive/to remove directory
+
+
+r it is used read the content
+w it allows to make modiciations on file... insert/update and delete...
+x it ised to make use of perations..
+
+rmdir/ rm -d ----to remove empty directory
+mv --
+1. rename a file
+2. Move file /directory from one laocation to onather location
+cp  onather way of creating file or directores...
+take the bakcup of file or directory
+maintain same file_name or directory on onathe rlocation
+
+-r for directory
+-p preserver peoprties
+
+links:
+Hard Link
+Soft link
+
+Hard Link
+ln Existing_file Link_file_name
+its for files only
+and inodes numbers are same.
+if u remove source file still targest are reachbale
+if u make changes at one place it refelcts everybody
+
+softlink--- ln -s 
+it can be for file or directory
+it can be created over thes file system and over NFS
+inodes numbers are different so if u remove source target is unreachbale.
+
+Special characters:
+
+*---one more character be default all...
+?---- To matcha single character that could be any 
+-  Range
+[]-- to sepcify more than one character as part of searching
+! to reverse the functina
+<  by defualt....input                            0
+> Copy the O/P of previous command to a file O/P. 1
+                                                  2 
+>>
+<<   Here Document it shoul dbe follwed by a name and it should end with same name to come out
+
+` Back quote... accesent Graves.
+'  
+"
+; to execute multiple commands
+| transfer previous command O/P as an input of next command
+^  -- to speficy begining chracter
+$ --- to specify ending character
+
+country=INDIA
+Continet=ASIA
+echo "My country name is $country and My continent is $Continet and sysatem date and time is `date`"
+My country name is INDIA and My continent is ASIA and sysatem date and time is Tue Feb  8 11:16:00 IST 2022
+[root@Rama ~]# echo 'My country name is $country and My continent is $Continet and sysatem date and time is `date`'
+My country name is $country and My continent is $Continet and sysatem date and time is `date`
+[root@Rama ~]#
+
+
+ls -lrt ??[a-d][e-k]??[1-9][7-9][!6-9]
+
+[root@Rama ~]# ls -lrt ???????????????????????? >Test_1.txt
+ls: cannot access ????????????????????????: No such file or directory
+[root@Rama ~]# ls -lrt ???????????????????????? >Test_1.txt 2>Error.txt
+[root@Rama ~]#
+du -sch * 1>out.txt 2>/dev/null
+du -sch * 1>stdout_stderror.txt 2>&1
+/dev/null
+paste 
+paste -s paster_text.txt
+paste - - paster_text.txt
+paste - - <paster_text.txt
+paste -s - - <paster_text.txt
+paste - - -d,  paster_text.txt
+paste - - -d, <paster_text.txt
+paste - - - -d, <paster_text.txt
+paste - - - - -d, <paster_text.txt
+paste --help
+paste -s -d",\n" paster_text.txt
+
+grep--- Golbally search for regular expression and print it
+to search one or more strings from one or more files at a time
+
+grep options file_name1 file_name2 *
+
+-i  ignore case
+-n to display line numbers
+-v Verbose (Rather than speciifed input)
+-s Supress error message
+-l to display file names which contains by keyword
+-w to display the lines which exactly contains by given patteren
+-o only given character/patteren
+-number to display lines before and after specified lines of matched strings
+-A  After the search pattern
+-B  before the search pattern
+-c count the number of lines which contains by the keyword
+-r *-- recursive
+-R
+-E/e   -- extened grep... it allows to search mor ethan one pattern at a time.
+-f to invike grep commands file and applay toa file.
+
+sort   to sort the data of a given faile.
+by defualt it sorts based on characters
+-n number
+-r reverse
+-u extract uniq lines
+-o copy sorted data to a new file
+-k sort based on specific filded.
+-t to specify delimeter
+sort  -t "," -k 3 -nr -u  -o sorted_test.txt sort.txt
+
+uniq must follwed by sory command
+
+1
+1
+2
+3
+3
+4
+
+1
+2
+3
+4
+
+2
+4
+
+1
+3
+it extracts unique lines
+-u to extract only unqiue lines
+-d 
+-c  to count the occurance of each lines.
+
+cut
+it allows to extract specific characters or specific fileds from a file
+-d -- to specify delementer
+-c to extract characters
+-f to extract files
+cut -c 1-4,5,8-13 countires.txt
+cut -f 4 sorted_test1.txt
+cut -d "," -f 4 sorted_test1.txt
+cut -d "," -f 4,5 sorted_test1.txt
+cut -d "," -f 1,4,5 sorted_test1.txt
+cut -d "," -f 1-3,4,5 sorted_test1.txt
+cut -d "," -f 1-3,4,5 sorted_test1.txt >cut_out.txt
+cut -d "," -f 1-3,4,5 sorted_test1.txt >sorted_test1.txt
+
+wc   it display number fo lines, words and chracters on a given file
+-c count the characters based on bytes
+by default it displays 3
+-l lines
+-w words
+-c characters
+
+diff/sdiff
+3d2
+< 3
+4a4
+> 3
+7,9c7,8
+< 1
+< 2
+< 2
+---
+> 5
+> 6
+1                                                               1
+2                                                               2
+3                                                             <
+hi                                                              hi
+                                                              > 3
+hello                                                           hello
+4                                                               4
+                                                              | 5
+                                                              | 6
+1                                                             <
+                                                              <
+2                                                             <
+                                                              <
+2                                                             <
+
+cmp
+[root@Rama RAMA]# cmp D11 D2
+D11 D2 differ: byte 5, line 3
+[root@Rama RAMA]# cmp -l D11 D2
+ 5  63 150
+ 6  12 151
+ 7 150  12
+ 8 151  63
+18  61  65
+20  62  66
+
+comm it display 3 fields O/P/
+F1: contains the lines which does not conatins by File2
+F2: contains the lines which does not conatins by File1
+F3: contains the common lines B/W 2 files.
+
+-1
+-2
+-3
+
+head  it is used to begining lines from a file
+head file_name-- by default it display 10 lines
+if you want to get required lines.... use -n or directly numbe
+head -n 20 file_name
+head -20 file_name
+head -1 file_name
+tail  it is used to get last lines from a given file
+tail -n 20 file_name
+tail -20 file_name
+tail -1 file_name
+
+tail -f file_name
+tail -f 20 file_name
+tailf -20 file_name
+
+i want to display lines numbers from 40 to 50;
+
+head -50 countires1.txt|tail -10
+
+pg to display file contenet page by page
+more to diplay file content line by lines. deoes not support navigation and search options
+less functinality is as similar as more but it has fruther options
+
+1. we can navigate...
+2. we can searcha a string by using /(from Top to Bottom) ?(bottom to top)
+3. G last lines M 
+
+q-- it used to quit
+ 
+ls -lrt|grep ^-
+ls -lrt|grep ^d
+ls -lrt|grep ^l
+ls -lrt|grep 'txt$'
+ls -lrt|grep 'txt$'
+[root@Rama RAMA]# ls -lrt|grep ^-|wc -l
+19
+[root@Rama RAMA]# ls -lrt|grep ^d|wc -l
+5
+[root@Rama RAMA]# ls -lrt|grep ^l|wc -l
+2
+cat D1|grep -v '^$' >D11  to remove balnk lines.
+grep -v '^$' file_name >D11
+
+tar----its a onather way to create files which the help of existing ones..
+1. create an archive
+2. we can compress it.
+3. Helpfull when u are tensfering files between 2 servers or unix to windows or wildonws to unix
+4, take the backup of rquired files in archive and remove originla files.
+
+tar options file_name.tar folder1 folder2 folder3 file_name filename onather_tar_file....
+
+-c -- create 
+-v -- verbose mode
+-f   -- file
+-t  ---list the contenet inside tar file
+-r  ---appened new file to existing tar file
+-x ----extract all or required files/directory from tar file..
+-z ---gizp the files while creating file itself..
+zip zip_file_name filesname directory_name.... / unzip file_name
+gzip 
+it does not create archive....
+it reduce file size of given input
+it does not take input as directory.... 
+it can only take i/p as file aor tar files...
+it allows to search a string or view file contenet with out unzipping
+zcat and zgrep
+
+gunzip zip_file
+
+"I am an indian, India am am great country, India has"
+I am an india,  10,14a 3,4 3,4  graet country, 10,14  huffman
+1 2 3 4 4 2 2   --lzo
+
+file contains lot fo duplicate worlds and lines it reduces more zize...
+file 1 size is 1GB
+file 2 size is 1GB
+gzip file1 file2
+file1 size is   100MB  
+file2 size is   800MB
+
+Huffman 
+lzo 
+compress/uncomress
+pack/unpack
+bzip
+
+gunzip
+unzip
+zcat
+zgrep
+view/vi
+
+ed  command line editor
+ex  extended functinlaoty of ed (one line editor)
+vi.... it self takes one day time....  (Visual Interface)
+
+the main 
+
+vi file_name
+vi +number File_name
+
+vi is a combonation of 3 modes
+ed mode (editor Mode)   its a defaulty mode... Esc is the keyword to go move to command mde
+ex Mode--- ex command Mode Esc:
+Insert mode. (i, I, a, A, o, O)
+
+
+useradd/adduser
+usergorup.addgroup
+chmod
+stickybit
+find
+sed
+awk
+
+cat >
+anycommand >
+cp
+touch
+ln 
+ln -s
+tar
+gzip
+sort -u 
+
+l : Moves the cursor to the right one character position.
+h : Moves the cursor to the left one character position.
+j : Moves the cursor down one line.
+k : Moves the cursor up one line.
+Above four we call it as Navigation keywords. 
+Zero (0) move the cursor beginning of line
+$  move the cursor end of line.
+w : Positions cursor to the next word.
+b : Positions cursor to previous word.
+2b
+2w
+1l
+3h
+10k
+20j
+x  (delete keyword)
+X   (backspace keyword)
+dw  to delete words
+dd  to delete lines
+d0 
+d$
+u  undo the opertion (CTRL+Z)
+r  it overwirtes current cursor position
+R  overwirtes from current cursoe position to end of the lines
+yy to copy the lines.... (CTRL+C) 
+p  it paste the lines    (CTRL+V)
+yw   to copy words    5yw
+
+g  to move a cursor from current cursor positin to begining of line.
+G  to move a cursor last line of the file  10G, 
+nG
+/   to search a chracter from top to bottom
+?  to search a chracter from bottom to top
+n  repeat same search again
+
+L  Last line of current page
+H   Last 
+M  Middle
+
+CTRL+L  last line of current page
+CTRL+H   Staring 
+CTRL+M   Middle of the line in current page 
+ctrl+f  FORWARD DIRECTON 
+ctrl+b   backward direction
+
+J TO JOIN LINES.
+
+i it converts from command mode to insert mode, but it allows to write data at current cursor posiotion
+I  it allows us to write the data from begining of the lines
+a  it allwos to write teh data after the curosr
+A  it allows to write the data at end of line
+o  it allows to write the data one line below from cursor position
+O
+s  it delete current word and allos to write data 
+S   it removes entire line and allows us to write data
+
+Ex-command: ESC:
+w  CtRL+S
+q quit 
+q! quit with out saving
+zz  Save and quit. 
+wq
+
+! any normal commands
+ 
+<range> s/str1/str2/g   
+
+co  copy the lines and paste requires place
+Range co number
+mo move certianl lines from one loaction to onather location.
+w
+set nu
+set nonu
+to move a cursoe to next file if you open multiple files at a time with vi editor
+n
+rew
+f to display file_name
+vim
+
+1, $ s/str1/str2/g
+1, $  is the range....
+s--- subsutite
+str1 existing string
+str2 replace sting
+g globllay on same line if samr pattenres existing more than one time to replace all occurances we should use g
+
+
+
+ESC_MODE_TEST.txt
+
+vi ESC_MODE_TEST.txt countires1.txt cut_out.txt
+
+useradd/adduser
+useradd KADAPA3 -b /root -c "its account of managing services" -s /bin/sh -u 12345678 -g 123456788
+
+passwd user_name
+addgroup/groupadd
+chown
+chmod
+
+9493351749--- 
+9440727245
+
+useradd KADAPA3 -b /root -c "its account of managing services" -s /bin/sh -u 12345678 -g 123456788
+
+
+useradd gandi -b /root/RAMA/ -c "its account of lord anjienya" -s /bin/sh -u 2226 -g 9620
+useradd gandi -b /root/RAMA/ -c "its account of lord anjienya" -s /bin/sh -u 2226 -g 9620
+groupadd group_name
+groupadd -g GID group_name
+
+/etc/group
+/etc/passwd
+/etc/shell
+
+stickybit
+chmod
+chown
+chgrp
+          file                     directory
+read      list/read the content    u can navigate the directory      
+write     modifctaion/edit/delete  u can create new files/directory
+execute   to make use of program   u can able to list the contenet inthat directory
+
+/COUNTRY/INDIA/AP/KADAPA/XYZ
+r-4
+w-2
+x-1
+tital==7
+
+drwxr-xr-x. 2 root root  6 Feb 18 10:30 TEST 755 
+-rw-r--r--. 1 root root  0 Feb 18 10:30 test 644
+Default permissions of file is 644 and directory is 755
+
+
+as per unix/linix INC... standard permissions of file is 666 and directory is 777
+666
+777
+will sunstract from umask...
+it allows to set default directory or file perfmissions  the deafult value of umask is 022
+[root@Rama INDIA]# umask
+022
+[root@Rama INDIA]#
+
+666-022=644
+777-022=755
+
+drwxrwxrwx. 2 root root  6 Feb 18 10:36 TEST1-0000
+-rw-rw-rw-. 1 root root  0 Feb 18 10:37 test-0000
+
+777-000=777
+666-000=666
+
+umask 444
+777-444=333
+666-444=222
+
+chmod....
+
+chmod permisiions file_name
+-R -- recursively applicable for directories
+Permissions
+Numbers:
+777
+755
+644
+222
+111
+100
+755
+7---007
+6   006
+5   005
+45---045
+
+characters: 
+u --owner
+g   group
+o   others
+
+r
+w
+x
+
++  addition 
+-  subtraction
+
+chown
+
+
+
+
+
+-r--r--r--. 1 root root 0 Feb 18 10:46 A     444
+can u provide write and execute permissions for owner  2+1=3+4=7
+and execute permissions for group             1+4=5
+and remove read permissions for others.             4+0=4
+
+o+rx,g+r,o-r
+
+chmod 754 A
+chmod 314 A
+007
+
+mkdir -m 777 D1 D2
+666-022  644
+777-022  755
+chmod 
+
+-p 
+-m
+mkdir D1
+
+India -- read and execute
+ckpt    read, write and execute
+KADAPA  READ
+KADAPA2  Write
+
+getfacl
+setfacl
+
+
+POSIX----
+
+
+[divi@Rama ~]$ setfacl --help
+setfacl 2.2.51 -- set file access control lists
+Usage: setfacl [-bkndRLP] { -m|-M|-x|-X ... } file ...
+  -m, --modify=acl        modify the current ACL(s) of file(s)
+  -M, --modify-file=file  read ACL entries to modify from file
+  -x, --remove=acl        remove entries from the ACL(s) of file(s)
+  -X, --remove-file=file  read ACL entries to remove from file
+  -b, --remove-all        remove all extended ACL entries
+  -k, --remove-default    remove the default ACL
+      --set=acl           set the ACL of file(s), replacing the current ACL
+      --set-file=file     read ACL entries to set from file
+      --mask              do recalculate the effective rights mask
+  -n, --no-mask           don't recalculate the effective rights mask
+  -d, --default           operations apply to the default ACL
+  -R, --recursive         recurse into subdirectories
+  -L, --logical           logical walk, follow symbolic links
+  -P, --physical          physical walk, do not follow symbolic links
+      --restore=file      restore ACLs (inverse of `getfacl -R')
+      --test              test mode (ACLs are not modified)
+  -v, --version           print version and exit
+  -h, --help              this help text
+
+chown 
+
+chown username file_name/directory_name
+
+chown divi A
+chown divi:grp1 A
+chown divi:grp1 D
+chown -R divi:grp1 D
+
+
+chigrp group_name file_name/directo
+-R 
+
+
+tr  translate....
+tr options 'set1' set2' <file_name
+command|tr options 'set1' set2'
+tr '[:lower:]' '[:upper:]' <D11
+tr '[a-z]' '[A-Z]' <D11
+
+tr '\n' ' ' <D11
+
+tr ' ' '\n' <D11|sort|uniq -c|sort -n -r
+
+find
+SED
+AWK
+
+[root@Rama RAMA]# echo "my ID is 73535" | tr -d [:digit:]
+my ID is
+[root@Rama RAMA]# echo "my ID is 73535" | tr -cd [:digit:]
+73535[root@Rama RAMA]#
+
+tr -cd [:print:]  <file_name>
+
+
+
+process releated commands
+scheduling commands
+transfer commands:
+
+Shell scripts
+
+chmod u+t directory_name/file_name
+chmod 1777/1555 file_name/director
+
+
+find it allows to search a file or directory from current. root or from specified directory.
+
+find Diretcory_name options -print
+.
+/
+/root/RAMA
+
+find 
+with out any options find commands display contenet recursively 
+ls -lRt
+-name ----- to specify search input
+
+find . -name "RAMAIAH"
+find / -name "RAMAIAH"
+find /home/divi -name "RAMAIAH" -print
+-type f/d/l/c/b
+
+-inum 
+-perm
+-owner
+-group
+-links 
+find . -inum 138138
+MAC
+mtime  +24 Hours
+atime
+ctime
+amin  less than 24 hours
+cmin
+mmin
+size
+
+-exec
+-maxdepth
+morethan 10 days
++10
+-10
+10
+
+
+find -maxdepth 2
+find -maxdepth 1
+find -maxdepth 2
+ls -lrt
+find . -type f -mtime +4
+find . -type f -mtime 4
+find . -type f -mtime -4
+find . -type f -mtime 2
+find . -type f -mtime 1
+find . -type f -mtime 5
+find . -type f -atime 5
+find . -type f -ctime 5
+find . -type f -mmin -5
+find . -type f -cmin -5
+find . -type f -amin -5
+find . -type f -amin +5
+find . -type f -amin 5
+find . -type f -size +2M -print
+find . -type f -size -2M -print
+
+bollean operators
+-a  and  
+-o Or operator
+!  Reverse func
+1 1 1
+0 1 0
+1 0 0
+0 0 0
+
+1 1 1
+1 0 1
+0 1 1
+0 0 0
+
+find . -type f -size -2M -a -mtime +4 -a -perm 644 -print
+
+-exec the main intened is redirect input from standard source to some other program, interative
+| concurently
+
+xargs
+
+find . -type f -mtime +10 -exec rm -rf {} \;
+find . -type f -mtime +10 -exec gzip {} \;
+find . -type f -mtime +10 -exec mv /var/tmp/ {} \;
+
+{}-- place the files which are getting by exec one by one
+\;...to interate the loop.
+
+find . -type f -perm 777 -exec chmod 700 {} \;
+
+INIDA on few files....
+
+find / -type f -name "*" -exec grep -i inida {} \;
+find / -type f -name "*"|xargs grep -i india
+
+sed  stream editor....
+
+sed options 'operations' file_name
+
+
+
+sed 
+-i  to make changes permanetly on input file
+-n   to supress default behaviour of sed commands
+
+operatiosn of sed commands:
+substutite: s
+delete      d
+print       p
+write       w
+insert the text i 
+appedn the text a
+
+sed -i 's/Str1/Str2/g' file_name
+
+
+
+it can also take i/p from previous command O/P.
+
+awk
+tee
+
+sed 's/123456/INDIA/g' test_abc.txt
+sed -n 's/123456/INDIA/g' test_abc.txt
+sed -n 's/123456/INDIA/g' test_abc.txt >test_abc1.txt
+sed 's/123456/INDIA/g' test_abc.txt >test_abc1.txt
+sed -i 's/123456/INDIA/g' test_abc.txt
+sed -i 's/INDIA/BHARATH' test_abc.txt
+sed -i 's/INDIA/BHARATH/' test_abc.txt
+sed -i 's/INDIA/BHARATH/' test_abc.txt
+sed -i 's/INDIA/BHARATH/' test_abc.txt
+sed -i 's/BHARATH/INDIA/g' test_abc.txt
+sed -i 's/INDIA/BHARATH/3g' test_abc.txt
+sed -i 's/INDIA/BHARATH/3g' test_abc.txt
+sed -i 's/INDIA/BHARATH/2g' test_abc.txt   All ines from top to bottom only second occurance
+sed -i '1,3 s/INDIA/BHARATH/1g' test_abc.txt
+sed -i 's/BHARATH/INDIA/g;s/thiss/this/g;s/sis/is/g' test_abc.txt
+sed -i 's/^/1 /g;s/$/ 2/g' test_abc.txt
+
+how to print lines using sed command:   head and tail   (p)
+
+sed -n '1p' file_name
+sed -n '1,5p' file_name
+sed -n '1p;$p' test_abc1.txt
+sed -n '1~2 p' test_abc1.txt   to print odd lines
+sed -n '0~5 p' test_abc1.txt   to print even lines
+sed -n '/^$/p' test_abc1.txt
+sed -n '/INDIA/p' test_abc1.txt
+sed -n '/INDIA/,/AP/p' test_abc1.txt
+sedn -n '2,5 p' file_name
+
+d---- deletes
+sed -i '/^$/d' test_abc1.txt
+w  --- write...
+i  --insert the lines
+a--appened the lines
+
+
+sed -i '1i THIS IS SED TEST SUING A OPTION' test_abc1.txt
+sed -i '3a THIS IS SED TEST SUING A OPTION' test_abc1.txt
+sed -i '$a THIS IS SED TEST SUING A OPTION' test_abc1.txt
+
+[root@Rama RAMA]# init 0
+
+awk-- Aho, Weinger, Keirberger--- nawk/gawk---
+
+Command Line Syntax: 
+awk options 'selection criteria {print columns_names/(operations of awk)' file_name
+Program style Syntax
+awk options
+begin
+{
+}
+end 
+{
+}
+
+-F/FS---Filed separator....
+
+$NF----to get last field from a file...
+NF provides list of fileds contains by each line.
+awk '{print $((NF-1)),$NF}' employee.txt  how to get last 2 fileds from a file..
+
+ls -laRt|grep '^-'|awk '{print $NF}'|grep "^\."----we can get only hiden files from current directory
+
+awk '{print $1,$NF}' employee.txt
+echo "I am from INDIA|AP"
+echo "I am from INDIA|AP"|awk '{print $NF}'
+echo "I am from INDIA|AP"|awk '{print $NF}'|awk -F "|" '{print $2}'
+echo "I am from INDIA|AP-cuddapah,Vemappli-516259"|awk '{print $NF}'|awk -F "," '{print $2}'
+echo "I am from INDIA|AP-cuddapah,Vemappli-516259"|awk '{print $NF}'
+echo "I am from INDIA|AP-cuddapah,Vemappli-516259"|awk '{print $NF}'|awk -F "-" '{print $2}'
+echo "I am from INDIA|AP-cuddapah,Vemappli-516259"|awk '{print $NF}'|awk -F "-" '{print $2}'|awk -F "," '{print $1}'
+echo "I am from INDIA|AP-cuddapah,Vemappli-516259"|awk '{print $NF}'|awk -F "-" '{print $NF}'|awk -F "," '{print $1}'
+
+$1, $2, $3..
+
+process releated
+scheduling 
+
+awk '{print NR,$1,$2}' employee.txt
+
+
+awk '{ if($3 == "B6") print $0;}' geeksforgeeks.txt
+
+
+ls -lrt| awk '$5 >1060 {print $0}'
+ls -lrt| awk '$3 == "India1" {print $0}'
+-a
+-o
+!
+
+ls -lrt| awk '$5 >1060 && $3 == "India1" {print $0}'
+
+-a &&
+-o ||
+
+ls -lrt| awk '$5 >1060 || $3 == "root" {print $0}'
+awk 'BEGIN { for(i=1;i<=6;i++) print i*i; }'
+awk 'BEGIN { for(i=1;i<=6;i++) print "square of", i, "is",i*i; }'
+awk '{ if (length($0) > max) max = length($0) } END { print max }' employee.txt
+awk -F "," '/Ram/ && $2 == "first_class" {print $0}' students.txt|tr ',' '\n'|sed '1d'|awk '{x+=$1}END{print x}'
+awk -F "," '/Ram/ && $2 == "first_class" {print $0}' students.txt|tr ',' '\n'|sed '1d'|awk '{x+=$1}END{print x}'
+ls -lrt|awk '{print $1","$2"-"$4}'
+ls -lrt|awk 'OFS = ","|" {print $1,$2,$3}'---- comma O/P Filed Separator
+ls -lrt|awk 'ORS ="|" {print $1,$2,$3}'---- Pipe is output record separator
+ls -lrt|awk 'OFS = ",",ORS ="|" {print $1,$2,$3}'
+
+tea  extened 
+
+wc  lower_orders_1.txt | tee tee_test_wc-l.txt
+cat tee_test_wc-l.txt
+wc  lower_orders_1.txt | tee tee_test_wc-l.txt tee_test_wc-3.txt tee_test_wc-2.txt
+ls -lrt
+cat tee_test_wc-l.txt cat tee_test_wc-3.txt cat tee_test_wc-2.txt
+ls -lrt
+wc -l students.txt
+wc -l tee_test2 students.txt tee_test2
+wc -l tee_test2 students.txt tee_test2 |tee -a tee_test_wc-l.txt
+cat tee_test_wc-l.txt
+wc -l tee_test2 students.txt tee_test2 |tee tee_test_wc-l.txt
+cat tee_test_wc-l.txt
+wc -l tee_test2 students.txt tee_test2 |tee -a tee_test_wc-l.txt
+cat tee_test_wc-l.txt
+df -h | tee disk_usage.txt
+cat disk_usage.txt
+df -h | tee -a disk_usage.txt
+cat disk_usage.txt
+ls -lrt
+cat disk_usage.txt
+cat disk_usage.txt|tee disk_usage1.txt
+cat disk_usage.txt
+echo "hi.. today is Firday"
+echo "hi.. today is Firday"|tee HI.txt
+cat HI.txt
+echo "hi.. today is Firday"|tee HI.txt HI.txt1 HI.txt1 HI.txt3 HI.txt4
+cat HI.txt HI.txt1 HI.txt1 HI.txt3 HI.txt4
+history
+
+cal
+
+cal -j 1 11 2022
+cal  1 11 2022
+
+ cal [options] [[[day] month] year]
+
+date
+
+2022_02_25_10.txt
+2022_02_25_11.txt
+2022_02_25_12.txt
+2022_02_26_10.txt
+
+-
++
+%
+%a
+%m
+%k
+%l
+%j
+
+
+
+
+
+
+ %%   a literal %
+  %a   locale's abbreviated weekday name (e.g., Sun)
+  %A   locale's full weekday name (e.g., Sunday)
+  %b   locale's abbreviated month name (e.g., Jan)
+  %B   locale's full month name (e.g., January)
+  %c   locale's date and time (e.g., Thu Mar  3 23:05:25 2005)
+  %C   century; like %Y, except omit last two digits (e.g., 20)
+  %d   day of month (e.g., 01)
+  %D   date; same as %m/%d/%y
+  %e   day of month, space padded; same as %_d
+  %F   full date; same as %Y-%m-%d
+  %g   last two digits of year of ISO week number (see %G)
+  %G   year of ISO week number (see %V); normally useful only with %V
+  %h   same as %b
+  %H   hour (00..23)
+  %I   hour (01..12)
+  %j   day of year (001..366)
+  %k   hour, space padded ( 0..23); same as %_H
+  %l   hour, space padded ( 1..12); same as %_I
+  %m   month (01..12)
+  %M   minute (00..59)
+  %n   a newline
+  %N   nanoseconds (000000000..999999999)
+  %p   locale's equivalent of either AM or PM; blank if not known
+  %P   like %p, but lower case
+  %r   locale's 12-hour clock time (e.g., 11:11:04 PM)
+  %R   24-hour hour and minute; same as %H:%M
+  %s   seconds since 1970-01-01 00:00:00 UTC
+  %S   second (00..60)
+  %t   a tab
+  %T   time; same as %H:%M:%S
+  %u   day of week (1..7); 1 is Monday
+  %U   week number of year, with Sunday as first day of week (00..53)
+  %V   ISO week number, with Monday as first day of week (01..53)
+  %w   day of week (0..6); 0 is Sunday
+  %W   week number of year, with Monday as first day of week (00..53)
+  %x   locale's date representation (e.g., 12/31/99)
+  %X   locale's time representation (e.g., 23:13:48)
+  %y   last two digits of year (00..99)
+  %Y   year
+  %z   +hhmm numeric time zone (e.g., -0400)
+  %:z  +hh:mm numeric time zone (e.g., -04:00)
+  %::z  +hh:mm:ss numeric time zone (e.g., -04:00:00)
+  %:::z  numeric time zone with : to necessary precision (e.g., -04, +05:30)
+  %Z   alphabetic time zone abbreviation (e.g., EDT)
+
+[root@Rama ~]# date -d@999999
+Mon Jan 12 19:16:39 IST 1970
+[root@Rama ~]# date -d@1
+Thu Jan  1 05:30:01 IST 1970
+[root@Rama ~]# date -d@2
+Thu Jan  1 05:30:02 IST 1970
+[root@Rama ~]# date -d"2023-01-01 10:20:20"
+Sun Jan  1 10:20:20 IST 2023
+[root@Rama ~]# date -d"2023-01-01 10:20:20" +%s
+1672548620
+
+
+
+
+bc --- basic claculator/bets calclualtor
+let
+expr
+$(( ))   -- to perfrom basic arthemetic operations for only digits
+
+split
+csplit
+
+
+
+df
+du
+free
+top
+netstat
+ping
+tnsping---- Database----
+nslookup
+ifconfig
+ip a
+vmstat
+iostat
+lscpu
+lsblk
+
+
+
+File transfer commands:
+
+ftp--- it allows us to transfer files between unix to windows viceversa or unix to unix 21
+sftp
+scp--- between 2 linux servers              22
+ssh--- secure shell(Socket) shell 
+rsync
+Telnet                                       23
+
+
+
+ftp username@servername or ftp servername
+
+To transfer files between windows to unix---- or vice versa
+
+Window+R-->cmd
+
+ftp username@servername
+enter the password:
+get
+put
+mget
+mput
+passive
+prompt
+other internal commands:
+ls
+lcd
+
+get the files from local (Windows) to ftp(remote) servers:
+get file_name location
+get C:\Users\Shanmukh & Divi\Desktop\Docs\test1234 location
+location is an optional
+
+get C:\Users\Shanmukh & Divi\Desktop\Docs\test1234 
+
+above command transfer files to default working location.
+
+mget ---multiple gets
+put file_name location
+mput 
+prompt n;
+
+bye...
+
+ftp is plain text transfer--21--- and we can not also automate transfer 
+
+sftp: 22
+
+
+
+sftp username@servername/ip_address
+enter the password of root:
+
+
+put  command is used to get the files from local server to FTP server:
+get  command is used to get the files from FTP server to local server: 
+
+
+Authentication Keys:
+ssh-keygen -t rsa / dsa
+
+[root@Learning ~]# ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa):
+Created directory '/root/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /root/.ssh/id_rsa.
+Your public key has been saved in /root/.ssh/id_rsa.pub.
+The key fingerprint is:
+51:f5:15:df:5b:2b:30:4e:0d:8e:dc:68:c9:a1:9b:bd root@Learning.com
+The key's randomart image is:
++--[ RSA 2048]----+
+|         ..o.  .o|
+|        +.B o. .o|
+|       ..B * .. +|
+|        =.o o   +|
+|       oS. . . o |
+|          .   .  |
+|         E       |
+|                 |
+|                 |
++-----------------+
+[root@Learning ~]#
+
+scp-- securecopypaste...  its only to transfer files bwteen 2 linux servers
+in case due to some abstraction entire copy will not transfered it 
+
+
+ssh -- it is used to connect differnt unix meachine from current meachine
+
+usage: scp [-12346BCpqrv] [-c cipher] [-F ssh_config] [-i identity_file]
+           [-l limit] [-o ssh_option] [-P port] [-S program]
+           [[user@]host1:]file1 ... [[user@]host2:]file2
+
+usage: ssh [-1246AaCfgKkMNnqsTtVvXxYy] [-b bind_address] [-c cipher_spec]
+           [-D [bind_address:]port] [-E log_file] [-e escape_char]
+           [-F configfile] [-I pkcs11] [-i identity_file]
+           [-L [bind_address:]port:host:hostport] [-l login_name] [-m mac_spec]
+           [-O ctl_cmd] [-o option] [-p port]
+           [-Q cipher | cipher-auth | mac | kex | key]
+           [-R [bind_address:]port:host:hostport] [-S ctl_path] [-W host:port]
+           [-w local_tun[:remote_tun]] [user@]hostname [command]
+[root@Rama ~]#
+
+
+Process releated commands:
+A proces is a runing instance of program. 
+
+unix allocates unique process id for every process. PID,PPID
+
+
+
+Process has its own PID along with PPID
+
+init  ---- 1--- initial program----
+
+init 0
+init 1 it starts the --- Deamon process---- init
+schedule
+vhand 
+bdflush
+
+ps -e
+ps -ef
+ps -eF
+ps -ely
+
+ps ax
+ps axu
+
+ps -ejH
+ps axjf
+
+ps -eLf
+ps axms
+
+ps -U root -u root u
+
+process and histortical 
+
+Submited
+Active
+ready for execution
+Running/executing
+Sucess
+failed
+terminated
+cancelled
+inactive
+Zombie / Defnuct
+fork
+orphan
+
+jps
+pstree
+
+KIll command: 
+
+1. if system perfromace is too slow
+2. By mistakely executed a program but which is not needed
+3. if a program is runing from longer time than expected
+4. Zombile process.
+
+kill options process_id1 process_id2 process_id3 process_id4 .... process_idn
+
+-3   it takes dump of process and termainates   Non java processs...
+-9   Sure kill
+-15  Grace full
+
+inorder to kill any program we need to get process if using belwo comands
+ps -eaf |grep - process_name|grep -v grep
+kill -9 pid
+Kill commanad completely honours the permissions.
+kill -9 `ps -eaf |grep - process_name|grep -v grep|awk '{print $2}'`
+java program..... JVM---- Java Virtual memory -....
+jstack -l PID >file_name  Thread Dump
+jmap  -m PID >file_name    Heap Dump
+
+Multi tasking in UNIX:
+
+&
+
+command/Program &
+
+The O/P of Backgrround process over writes the o/P of front screen, so you need to redirect o/p to a file
+if toomnay background process are runing on server it degrades teh prferoemce
+if you logout or if your session terminated all the process which are runing on bachground terminated half waythough.
+nohup 
+nohup command/Program &
+jobs
+fg id
+
+
+Communication:
+Chat   Write, Wall 
+Down load files from Web: wget 
+mails---- mail, mailx, sendmail..
+
+who -T
++ Ready for communication
+- Not redy for communication:
+
+mesg---- y or n
+mesg -y
+mesg -n
+
+write username
+
+Wall: it i sued to send a broadcast messages who are connected to the system.
+wall
+
+mails---- mail, mailx, sendmail.
+
+mail -s "subject" -a "attachement" mail_id's
+
+-s subject
+-u username
+-r from address
+-a attachmnet
+-f body of email
+-b "bcc users"
+-c "cc users"
+
+mail -s "subject" vikumar@gmail.com
+hi 
+hello
+ctrl+d
+
+mail -s "subject" vikumar@gmail.com <file_name
+cat file_name|mail -s "subject" vikumar@gmail.com
+echo "body of teh message" |mail -s "subject" vikumar@gmail.com
+echo "body of teh message" |mail -s "subject" vikumar@gmail.com -a attachement
+
+sendmail----we can send an email with customized format by using html tages:
+<string>     </strong>
+
+all incoming emails available at /var/spoll/mail
+
+wget url/file_name
+wget -u username:password url/file_name
+wget -k insecure -u username:password url/file_name 
+
+python -m SimpleHTTPServer
+http://hostname -f:8000
+
+rsync
+scheduling commands:
+
+curl.... API--- Application Program interface....
+
+GET--- Get the data from website in HTML format
+POST---to place a files
+
+
+Scheduling Commands:
+at:  Syntax:  at Time
+now+10 mins
+now+1 hour
+now+3 days
+at 2023-04-04 10:30 
+at 2023-04-04 20:30 
+
+at -l
+at -r
+at -u 
+
+batch
+crontab ---->to schedule the job forever.....
+pre: Corntab should be installed and it shoul dbe up and running
+crontab should associate to any of editor (VI)
+You must have a priviliges to schedule the jobs using crontab.
+SYTNAX:
+
+Minutes 	Hours 	DayofMonth 	MonthofYear 	Dayofweek 	program_name
+0-59       0-23    1-31          1-12          0-6/1-7    abc.sh
+                                               0/7 as Sunday..
+Options: 
+-e --- we can make new entires or we can edit existing entires of crontab
+-l---- to list the jobs scheduled by current user
+-r-----to remove all entires scheduled by a current user
+-u---- Specific user details.
+
+Minutes 	Hours 	DayofMonth 	MonthofYear 	Dayofweek 	program_name
+0-59       0-23    1-31          1-12          0-6/1-7    abc.sh
+
+#to shcedule a jobs everyday at 10:00 AM IST:
+00 10 * * * abc.sh
+#to shcedule a job at 11:59 PM IST on 2nd April 2022:
+59 23 02 04 * Happyugadi.sh
+#to shcedule a job at 00:00 IST on 1st day of every month.
+00 00 1 * * abc.sh
+#to shcedule a job at 00:00 IST on Monday and firday.
+00 00 * * 1,5 abc.sh
+## To schedule a job between monday to wednesday between 8 to 12 PM every 15 mins.
+0,15,30,45 8-12 * * 1-5 abc.sh
+## To schedule a job every 5 mins between 0 to 12:
+0,5,10,15,20,25,30,35,40,45,50,55 0-12 * * * abc.sh
+### To schedule a jobs 2nd saturday of every month at 10:00 AM IST
+#00 10 8-14,22-28 * 6 abc.sh
+
+### To schedule a jobs last day of everymonth at 9:00 PM ISt
+00 21 `cal|tail -2|head -1|awk '{print $NF}'` * * abc.sh
+
+As part of script yoiu should always keep obsolute path of program
+Shell varibales:
+misl
+59 23 28-31 * * [ "$(date +\%d -d tomorrow)" = "01" ] && abc.sh
+
+autosys
+contol-m
+tivoli.
+
+Shell variables:
+
+$$   ---> it provides process id of currently using shell.      
+$! -----> Provides process id which compleated recently on backgrround.
+$?  --- it provides the exit status of last executed command, if previous command was success O/P 			is Zero else O/P is >0;
+$-  it provides cureent shell settings
+$0
+1. It provides shell name which is currently using on Command prompt 
+2. inside shell script it gives name of the script 
+$1---$9--- to access the paramateres which are passing while executing the script.
+$varibale_name --- it is used to access the value of variable.
+$*--- we can access all positonal paramaters at one time eventhough if number of parameters 			are more than 9
+$@--> Functinality is as similar as $*, but it constructs an array and allows us to access 		  values one by one.
+$# --- to count howmany paramaters passed while executing script.
+echo $SHELL  -- it always provides default shell which is allocated to u
+
+sqlplus ---- it allows to connect to oracle database from UNIX/LINUX...
+sqlplus options username/password@DBNAME
+ABove connecton works if TNSnames.ora file exists on server.
+sqlplus options username/password@'(DESCRIPTION = (SDU = 32768)(ADDRESS_LIST = (ADDRESS = (COMMUNITY = SAP.WORLD)(PROTOCOL = TCP)'
+sqlplus options username/password@servername:port
+sqlplus options username/password@DBNAME 
+-s --- silent mode
+con-- connect... coneect username/password@DBNAME 
+mysql---- it allows to connect to MySQL database from UNIX/LINUX..
+mysql -u username -p'password' -h'hostname' 
+mysql -u username -p'password' -h'hostname' -e "select statetemnet;"
+isql-------- it allows to connect to Sybase database from UNIX/LINUX..
+isql -u username -p'password' -h'hostname'
+
+profile files:
+
+/etc/profile-- which is a global file, intened of this file after reboot of server if you want run any program/scripts ... or if you want to declare...
+ source profile_name
+
+/etc/init.d/:  services: 
+run tomcat servcice
+mysql service
+--
+
+Mutil user
+Multi taksing
+Security
+Portability
+Scheduling
+
+Automation:
+ Scripting....  A shell script is a collection of commands keeping it on chronologocal order to achive a specific task.
+
+BSNL:
+A. which is having 200 Web sources where we need to download files every one hours--wget (IF)
+B. you want to merge all 200 files into a single file----cat or any best command (While, for, until)
+C. segirigate--- using grep command
+  1. incoming calls are in  one file
+  2  outgoing calles are in one file
+  3. SMS is one file
+  3. MMS in to one file
+  5. Network usage in one file
+  6. All postpaid calls in to one file.
+D. load data into database files (contol files along with ZYX)
+E. forward same data into some other sources---- FTP/SFTP/SCP..
+
+
+wget URL1:/file_name 
+wget URL2:/file_name
+...
+wget URL200:/file_name
+Customize the work enevironmnt:
+Extention of shell script is .sh
+
+vi script_name.sh
+#!/bin/shell_name ---- C Bang statemenet
+#!/bin/sh
+#!/bin/bash
+#!/bin/csh
+#!/bin/tcsh
+
+How to debug the script:
+sh -vx script_name
+-v is each line should validate before it executes
+-x validate commands... 
+
+run prgram.
+sh program_name
+./script_name   (relative)
+excac_path/scriptname  (absolute)
+
+to execute a program when u launch a session.... place at defualt shell profile file .bashrc .kshrc
+
+to execuet a program when server got bootes place at /etc/profile file
+
+one way with out of using path: but it is temp
+export PATH=$PATH:`pwd`
+echo $PATH
+
+one way with out of using path: make it perm:
+
+vi Test.sh
+line1
+line2
+line3
+#!/bin/sh -vx
+line4
+line5
+line6
+#!/bin/ksh
+line7
+line8
+line9
+#!/bin/bash +vx 
+line10
+line11
+
+Varibales: it is a place holder:
+
+sum number(5)
+name char(20)
+sysdate date;
+
+in Unix
+does not have data type restirctions
+a Varibale can allocate any kind of data
+can be declared at point of program
+value of variable can be changed dynaimcally
+value of variable can be accessed using $ Sign
+
+Things to be remember:
+1. Name of varibale should start with Character
+2. If name of varibale is more than 2 individual characters or 2 words should use _ to concatenate
+3. Name of the valiable should be relevant to operations.
+
+Name=A
+NAME=B
+NAme=C
+name=d
+namE=e
+
+echo $Name $NAME $NAme $name $namE
+
+Decalring record in unix:
+
+1. Varibale usage with read command: 
+
+read is used read teh value of varibales which are passing after executing the script
+read varibale_name
+
+#!/bin/sh
+echo "enter the values of a and b"
+read a b 
+echo "sum of 2 numbers is $(( $a + $b))"
+echo "sum of 2 numbers is $(( $a + $b))"
+echo "subraction of of 2 numbers is $(( $a- $b))"
+echo "mul of 2 numbers is $(( $a * $b))"
+echo "divi of 2 numbers is $(( $a / $b))"
+echo "expo of 2 numbers is $(( $a ** $b))"
+
+read -a array_name
+
+1. Simple intreste of given values
+P T R
+P*T*R/100
+
+2. sum of natural number:
+n*n+1/2
+
+positional Parameters /command line arguments
+$0....$9
+$*
+$@
+$#
+
+#!/bin/sh
+a=$1;b=$2
+echo "sum of 2 numbers is $(( $a + $b))"
+echo "sum of 2 numbers is $(( $a + $b))"
+echo "subraction of of 2 numbers is $(( $a- $b))"
+echo "mul of 2 numbers is $(( $a * $b))"
+echo "divi of 2 numbers is $(( $a / $b))"
+echo "expo of 2 numbers is $(( $a ** $b))"
+
+
+echo "first valie is $1"
+echo "2nd valie is $2"
+echo "3rd valie is $3"
+echo "4th valie is $4"
+echo "5th valie is $5"
+echo "6th valie is $6"
+echo "7th valie is $7"
+echo "8th valie is $8"
+echo "9th valie is $9"
+echo "10th valie is $10"
+echo "11th valie is $11"
+echo "15th valie is $15"
+echo "20th valie is $20"
+
+By defualt we can access only 9 CLA'S by using their positions:
+shift
+shift number
+shift 2
+shift 3
+shift 9
+
+#!/bin/bash
+echo "Number of CLS'S are $#"
+echo "first valie is $1"
+echo "2nd valie is $2"
+echo "3rd valie is $3"
+echo "4th valie is $4"
+echo "5th valie is $5"
+echo "6th valie is $6"
+echo "7th valie is $7"
+echo "8th valie is $8"
+echo "9th valie is $9"
+echo "before shifting"
+echo $*
+echo $@
+shift 9
+echo "10th valie is $1"
+echo "11th valie is $2"
+echo "12th valie is $3"
+echo "13th valie is $4"
+echo "14th valie is $5"
+echo "15th valie is $6"
+echo "16th valie is $7"
+echo "17th valie is $8"
+echo "18th valie is $9"
+echo "19th valie is $10"
+echo "20th valie is $11"
+echo $*
+echo $@
+echo $#
+
+#!/bin/bash
+P=$1;T=$2;R=$3
+I=$(( $P*$T*$R/100 ))
+T_A=$(( $I+$P ))
+echo -e "Interest amount of given I/P is $I \nTotal Amount payable is $T_A"
+
+n*n+1/2
+
+#!/bin/bash
+echo "enter the number"
+read n
+c=$(echo "scale=1;($n+1)/2+$n" |bc);echo $c
+echo "$n*$c"|bc
+
+
+Arrays:
+
+declare -a State
+state=(AP KL 10 20 30 TN  KA TB TL)
+echo $state
+
+array_name=(values in space delimated)
+echo $array_name
+echo ${S[30]}
+
+Varibale name is S
+
+S=(AP KL  10 20 30 TN  KA TB TL)
+
+echo ${s}
+echo ${s[*]}
+echo ${s[1]}
+echo ${s[@]:1:4}  
+
+readonly --
+unset
+
+if [ condition ]
+then
+stetements
+fi
+
+---
+if [ condition ]
+then
+stetements
+else
+stetements
+fi
+
+else if statemenest
+if [ condition ]
+then
+stetements
+elsif condition 
+stetements
+elsif condition 
+stetements
+elsif condition 
+stetements
+elsif condition 
+stetements
+else
+stetements
+fi
+
+Nested IF...
+
+if [ condition ]
+  then
+  stetements
+     if [ condition ]
+        then 
+          statemenst
+              if [ condition ]
+                then  
+              statemenets
+              fi
+      fi
+fi
+
+
+case
+
+---  IF condition for Numbers/ Number test by using IF
+== / -eq ---
+<  / -lt
+<= / -le
+>  / -gt
+>= /  -ge
+!= / -ne
+
+Boolean: 
+-a && --- and operator
+1 1  1
+1 0  0
+0 1  0
+0 0  0
+-o || --- Or Operator.
+1 1  1
+1 0  1
+0 1  1
+0 0  0
+
+-----IF condition for strings
+-----if condition for Files/Directores....
+
+----> write a shell script to print given number is even or odd
+#!/bin/bash
+echo "enter the number"
+read n
+if [ $(($n%2)) -eq 0 ]
+then
+echo "the given number is $n is even"
+else
+echo "the given number is $n is odd"
+fi
+
+#!/bin/bash
+echo "enter the number"
+read n
+if [ $(($n%2)) -eq 0 ]
+   then
+     echo "the given number is $n is even"
+   else
+     echo "the given number is $n is odd"
+fi
+
+to swap the numbers:
+a=10
+b=20
+Before swap values are 10 and 20 for a and B
+Before swap values are 20 and 10 for a and B
+
+A=b
+B=c
+C=a
+a=$b
+input as 3 numbers   identify which number is grather than on given numbers
+10 50 90
+
+
+
+
+--- if number of inputs is < 3 or >3 your program has to be terminated
+--- if time is >=37 ---- you
+Time is 0 to 36 --- PTR/100
+     >36 and >72---
+     >73 and < 100---
+
+#!/bin/bash
+if [ $# -ne 3 ]
+then
+echo "script requires only 3 inputs, first paramater is Pricipal amount,second one is Time and last paramater is Interest Rate"
+echo "scriptname 10000 38 2"
+exit 
+fi
+P=$1;T=$2;R=$3;I=$1
+if [ $T -le 36 ]
+then
+I=$(($P*$T*$R/100))
+T_A=$(($I+$P))
+echo -e "Interest amount of given I/P is $I \nTotal Amount payable is $T_A"
+elif [ $T -gt 37 -a -le 72 ]
+then
+I=$(($P*36*$R/100))
+T_A=$(($I+$P))
+P=$T_A
+T1=$(($T-36))
+I1=$(($P*$T1*$R/100))
+T_A1=$(($I1+$P))
+echo -e "Interest amount of given I/P for 3 years is $I,  \n for Remaing years it is $I1 \nTotal Amount is $T_A1 "
+fi
+
+
+
+
+
+#!/bin/bash
+read a b
+echo "values of a and b before swapping is $a and $b"
+temp=$a
+a=$b
+b=temp$
+echo "values of a and b after swapping is $a and $b"
+aravind kumar8:44 AM
+
+cat Swap.sh
+#!/bin/bash
+a=$1;b=$2;c=$3
+if [ $a -eq $b ] && [ $a -eq $c ]
+then echo " numbers are equal"
+elif [ $a -gt $b ] && [ $a -gt $c ]
+then echo " a is greater "
+elif [ $b -gt $c ] && [ $b -gt $a ]
+then echo " b is greater "
+else " c is greater "
+fi
+
+cat compare.sh
+#!/bin/bash
+a=$1;b=$2;c=$3
+if [[ $a -eq $b  &&  $a -eq $c ]]
+then
+echo "The Given  numbers are equal which are $a $b $c"
+elif [ $a -gt $b ] && [ $a -gt $c ]
+then
+echo " a is greater values is $a "
+elif [ $b -gt $c ] && [ $b -gt $a ]
+then
+echo " b is greater Value is $b "
+else 
+echo "c is greater value is $c "
+fi
+
+
+
+Write a shell script to calculate avarage of given marks and display grade:
+
+input should take 7 paramaters first One should be name
+2
+if any given i/P is less than 35 fail
+if all input are >35 calculate avarage and percantahe then display grade
+>=75 --Distinction
+<75 and <60 first class
+second class
+third class
+fail
+
+if [ $# -ne 7 ]
+then
+echo 
+echo "
+fi
+
+if [ $2 lt 35 ] && [ $3 lt 35 ] && [ $4 lt 35 ] && [ $5 lt 35 ] && [ $6 lt 35 ] && [ $7 lt 35 ] 
+then
+echo "the student $1 is fail below are his marks"
+else
+s=$(($1+$2)
+grade=
+if [ $grade -ge 75 ]
+
+
+String Test...
+
+string1 = string2 ---True if both strings are same
+string1 != string2 ---True if both strings are not same
+-n string ---True if it is string which conains size as >0
+-z string ---True is it is zero size string
+string---- Tyrue if it is a string and which is not null
+
+
+test/[ ] 
+[[ ]]
+(( ))
+
+
+vi string_test.sh
+echo "Enter two strings"
+read s1 s2
+if [ $s1 == $s2 ]
+then
+echo "Both strings are equal"
+elif [ $s1 != $s2 ]
+then
+echo "Both strings are not equal"
+fi
+
+if [[ -n $s1 && -n $s2 ]]
+then
+el
+
+File test:
+
+-a/ -f file_name : True if given Input is a file
+-s file_name :     True if given Input is a file and it contains some size
+
+When the SGID-bit is set on a directory, all files created in that directory will inherit the group of the directory.if [ -g . ]; thenecho “Created files are inheriting the group ‘$(ls -ld . | awk ‘{ print $4 }’)’ from the working directory.”fi
+
+
+
+customer_details.txt   $?, grep -i elif compare.sh >/dev/null 2>&1
+username password
+Ram      Ram    
+Laxmnan  Laxmna
+
+Folder: XYZ: 
+
+Details of Ram is 
+/tmp/files/
+Ram.txt
+
+input has 2 files....
+if both files are identical
+
+vi Validation.sh
+#!/bin/bash
+echo "enter the username"
+read name
+awk '{print $1}' customer_details.txt|grep -w $name >/dev/null
+if [ $? -eq 0 ]
+   then
+    echo "the given user: $name exist on server so please enter password"
+    read pass
+    Epass=`grep -w $name customer_details.txt|awk '{print $2}'`
+       if [ $Epass != $pass ]
+         then
+            echo "The password is invalid/Wrong of given user"
+         else
+           if [ -s ${name}.txt ]
+            then
+             echo "Details of users $name are in below"
+             cat ${name}.txt
+           else
+             echo "Given user $name details does not exist on server, please create"
+           fi
+       fi
+  else
+  echo "the given user: $name does not exist on server"
+fi
+
+case:
+
+
+case control_vairble in
+Value)
+operations
+operations
+./shell script
+;;
+value)
+operations
+operations
+./shell script
+;;
+Value)
+operations
+operations
+./shell script
+;;
+Value)
+operations
+operations
+./shell script
+;;
+Value)
+operations
+operations
+./shell script
+;;
+*)
+operations
+esac
+
+
+case Country in
+India)
+execute operations releated India
+;;
+Bangaldesh)
+execute operations releated India
+;;
+*)
+execute operations releated India
+esac;
+
+$ cat signal.sh
+#!/bin/bash
+
+if [ $# -ne 1 ]
+then
+        echo "Usage : $0 Signalnumber PID"
+        exit
+fi
+
+PID=$1
+case $PID in
+
+1)  echo "Sending SIGHUP signal"
+    kill -SIGHUP $2
+    ;;
+2)  echo  "Sending SIGINT signal"
+    kill -SIGINT $2
+    ;;
+3)  echo  "Sending SIGQUIT signal"
+    kill -SIGQUIT $2
+    ;;
+9) echo  "Sending SIGKILL signal"
+   kill -SIGKILL $2
+   ;;
+*) echo "Signal number $1 is not processed"
+   ;;
+esac
+
+
+rev
+
+vi polindrome.sh
+#!/bin/bash
+echo "enter the Input"
+read I
+R=`echo $I|rev`
+if [ $I == $R ]
+then
+echo "The given input is polindrome"
+else
+echo "The given Input is not polindrome"
+fi
+
+
+Resource_utilization.sh: 
+
+1. Disk space utilization of /boot  if it is more than 70% it has to provide top cosumed files under that folder
+ it has to delete the files which are older than 20 days.
+df -h /boot|tail -1|awk '{print $5}'|awk -F "%" '{print $1}'
+du /boot  2>/dev/null|sort -nr|head
+find /boot -type f -mtime +20 -exec rm -rf {} \;
+df -h /boot|tail -1|awk '{print $5}'|awk -F "%" '{print $1}'
+
+Again check the disk space utilization if it is less than 70 fine else send an email to ur DL
+2. Check the memory utilization if it is more than 80% extract top consumed mermory process and notify to DL.
+free|grep Mem:
+ps aux |sort -k 4 -nr|head
+
+3. Check the load avarage on server if its is more than 80% extract the process which are highly consumed and notify to DL
+uptime
+ps aux |sort -k 3 -nr|head
+4. Identify the netwrok packet drops from server if it is more than 1234 number notify to DL.
+
+ifconfig -a
+
+you have to scheduele using corntab every dat at 7:30, 2:30 PM and 9:30 PM
+
+30 2,14,21 * * * Resource_utilizaion.sh
+
+
+Iterative control statemenets:
+
+File-- Interest.txt
+Marks.txt
+
+While
+For
+Until
+
+initialization
+while  [ condition ]
+do
+statemenets/operations
+incremenet operator
+done
+
+5 times
+
+j=1
+while [ $j -le 10 ]
+do
+echo $j
+i=`expr $j + 1`
+done
+
+
+i=1
+while [ $i -le 10 ]
+do
+echo $i
+i=$(($i+1))
+done
+
+i=1
+while [ $i -le 10 ]
+do
+echo $i
+i=`echo $i+1|bc`
+echo "INDIA"
+done
+
+
+j=10
+while [ $j -gt -20 ]
+do
+echo $j
+j=`echo $j-1|bc`
+done
+
+you need to print o/P on below format
+
+5 * 1 = 5
+5 * 2 = 10
+..
+5 * 10 = 100
+
+vi table.sh
+echo "enter the number"
+read n
+k=1
+while [ $k -le $n ]
+ do
+   echo "Table of $k is in below"
+   echo "========"
+   i=1
+     while [ $i -le 10 ]
+      do
+        echo "$k * $i = $(($k*$i))"
+        i=$(($i+1))
+        done
+   echo "===End of $k here=="
+   k=$(($k+1))
+done
+
+*
+**
+***
+****
+******
+******* 
+
+i=1
+while [ $i -le 6 ]
+do
+j=1
+while [ $j -le $i ]
+do
+echo -n "* "
+j=$(($j+1))
+done
+i=$(($i+1))
+echo 
+done
+
+1
+2
+3
+4
+5
+6
+*******
+******
+*****
+***
+**
+*
+i=6
+while [ $i -ge 1 ]
+do
+j=1
+while [ $j -le $i ]
+do
+echo -n "* "
+j=$(($j+1))
+done
+i=$(($i-1))
+echo 
+done
+
+1. check the diskspace utilization of all file system and capture which ever file system is >10 and send an email
+2. Exract all .txt format files from /apps folder and mv to /tmp
+3. to check weather given number is a polindorme or not
+4. print prime numbers upto the given number
+5. shell script for fibanaasi series.  Swap Numbers.....
+1 1 2 3 5 8 13 21 34
+
+vi Disk_space_check.sh
+#!/bin/bash
+mail_id="x@gmail.com,y@gmail,com"
+>Uti.txt
+df -h |sed '1d'|awk 'OFS=","{print $NF,$(NF-1)}' >Disk_usage.txt
+while read line
+do
+Fname=`echo $line|awk -F "," '{print $1}'`
+Uti=`echo $line|awk -F "," '{print $2}'|awk -F "%" '{print $1}'`
+#echo $Fname $Uti
+if [ $Uti -ge 5 ]
+then
+echo "Utilization of $Fname is grather then 80, current utilization is $Uti" >>Uti.txt
+fi 
+done<Disk_usage.txt
+
+if [ -s Uti.txt ]
+then
+echo "From `hostname` utilization is more than 80%" |mail -s "Utilization report of `hostname` at `date`" -a Uti.txt $mail_id
+fi
+
+while read line
+do
+statemeents
+done<file_name
+
+
+2. Exract all .txt format files from /apps folder and mv to /tmp
+
+find /apps -type f -name *.txt -exec mv /tmp {} \;
+find /apps -type f -name *.txt -exec scp username@servername:/tmp {} \;
+
+3.
+
+echo "Enter the number"
+read n
+number=$n
+reverse=0
+while [ $n -gt 0 ]
+do
+a=`expr $n % 10 `
+n=`expr $n / 10 `
+reverse=`expr $reverse \* 10 + $a`
+done
+echo $reverse
+if [ $number -eq $reverse ]
+then
+    echo "Number is palindrome"
+else
+    echo "Number is not palindrome"
+fi
+
+vi fiba.sh
+
+#!/bin/bash
+echo "enter the text"
+read n
+num=0
+i=$n
+while [ $n -gt 0 ]
+do
+num=$(expr $num \* 10)
+k=$(expr $n % 10)
+num=$(expr $num + $k)
+n=$(expr $n / 10)
+done
+if [ $num -eq $i]
+then
+echo palindrome
+else
+echo not palindrome
+fi
+
+#!/bin/bash
+echo "Enter the string:"
+read str
+echo
+len=`echo $str | wc -c`
+len=`expr $len - 1`
+i=1
+j=`expr $len / 2`
+while [ $i -le $j ]
+do
+k=`echo $str | cut -c $i`
+l=`echo $str | cut -c $len`
+if [ $k != $l ]
+then
+echo "String $str is not palindrome"
+exit
+fi
+i=`expr $i + 1`
+len=`expr $len - 1`
+done
+echo "String $str is palindrome"
+
+
+MALAYALAM
+
+Break/Contineu:  it should be inside of iterative  conrtol statemnet and it should associate with if.
+Break: to come out from loop once we reach to certian stage inside loop
+Contineu: To contineu the program even though if reach to certiaon stage inside the loop 
+
+2
+    while [ $j -lt $i ]
+    do
+         rem=$(( $i % $j ))
+        if [ $rem -eq 0 ]
+        then
+          flag=0
+          break
+        fi
+    j=$(( $j+1 ))
+    done
+    if [ $flag -eq 1 ]
+    then
+       echo "$i"
+    fi
+
+
+6/2=0 
+7---2,3,4,5,6,
+15, 
+j=2
+3
+4,5,6,7,8,9,0,
+
+
+
+Corntab---
+Minutes hours DM MY DW Script_name
+
+every 5 scconds
+consider corntab is diabled for you. 
+
+sleep 5
+sleep 5s
+sleep 5m
+sleep 1h
+sleep 7d
+
+while true/while 1=1
+do
+echo statemeents
+sleep 10s
+done
+
+
+while true
+do
+sh /root/table.sh
+sleep 10s
+done
+
+
+while true
+do
+sh /root/table.sh
+sleep 5h
+done
+
+while true
+do
+sh /root/table.sh
+sleep 7d
+done
+
+
+while i=1
+do
+echo $i
+sleep 3
+done
+
+For : 
+
+
+for ((initialization;condition;incremenetoperatior))
+do
+operations
+done
+
+for ((i=1;i<=10;i=i+1))
+do
+
+echo -e "* "
+done
+
+*
+**
+***
+****
+*****
+
+i=1
+while [ $i -le 10 ]
+do
+echo $i
+i=$(($i+4))
+done
+
+
+Unix Style Syntax:
+
+for conrtol_variable in Range/Output of command
+do
+operations
+done;
+
+case contarol_varibale in 
+10)
+;;
+20);;
+
+for i in {10..1}
+do
+echo $i
+done
+
+
+
+100 files... test_2022_03_22_1.txt
+
+D=`date +%Y-%M-%d`
+for file in {1..10} {40..70} {90..120} 
+do
+touch test_${D}_${file}.txt
+done
+
+
+
+for i in 1 2 3 4 5 6 7 8 9 10 100 A B C D E R F G H I J K L {1..5} `pwd` `logname` `uptime`
+do
+echo $i
+done
+
+while read line
+do
+echo $line
+done <ls.txt
+
+
+100 servers.... actfibernet{1..100}.net
+
+192.168.0.{100..255}
+#!/bin/bash
+
+### Generate authentication keys to connect as password less
+while true
+do
+>/tmp/Inaccessible.txt
+for server in 192.168.0.{100..255} actfibernet{1..100}.net
+do
+ping -c 1 -W 1 $server
+if [ $? -ne 0 ]
+then
+echo $server >>/tmp/Inaccessible.txt
+fi
+done
+
+if [ -s /tmp/Inaccessible.txt ]
+then
+echo "list of inaccessible servers" |mail -s "list of inaccessible servers at `date` -a /tmp/Inaccessible.txt mail_id1,mail_id2
+fi
+sleep 10m
+done
+
+abc.sql
+
+for DB in DB1 DB2 DB5 DB4     for DB in `cat DBNAMES.txt`
+do
+sqlplus -s username/password@${DB} "select 1 from dual"
+if [ $? -ne 0 ]
+then
+capture
+fi
+done
+if 
+
+sqlplus -s username/password@${DB} "@/root/abc.sql"
+mysql -u username -p'password' -h `hostname` "source /root/abc.sql"
+mysql -u username -p'password' -h `hostname` <root/abc.sql
+
+Script:
+
+
+for((i=1; i<=10; i++))
+do
+  for((j=1; j<=i; j++))
+  do
+    echo -n "* "
+  done
+  echo
+done
+
+
+for((i=10; i>=1; i--))
+do
+ for((j=1; j<=i; j++))
+  do
+    echo -n "* "
+  done
+   echo
+done
+
+
+
+
+1. I am having 2 files....comapre file 1 contenet with file 2 and display which are not exists on file2 from file1 and vice versa.
+file1
+1
+2
+3
+4
+file2
+1
+4
+6
+7
+
+2. Connect a database.... and fetch entire table data from emp and send it an email if size>0 and if there are no errors.
+
+#!/bin/bash
+mail_id=
+>/root/SHELL_SCRIPTS/abc.txt
+sqlplus -s username/password@DBNAME "@/root/SHELL-SCRIPTS/abc.sql"
+mysql -u username -p'password' -h`hostname -f` -e ""
+mysql -u username -p'password' -h`hostname -f` "use database;source /root/SHELL-SCRIPTS/abc.sql"
+sqlplus -s username/password@DBNAME <<!!
+whenever SQL error exit 1;
+whenever os error  exit 2;
+set page off;
+set footer off;
+set line number=2000;
+spool /root/SHELL_SCRIPTS/abc.txt
+select * from emp, dept where emp.deptid=dept.did;
+spool off
+!!
+
+< ---Input paramaeter
+<<-- here documnet 
+>   redirect paramter
+>>  appened 
+
+3. Transfer all files from server1 to server2 which exists on /var/tmp folder.
+
+if any of the file size is >10 MB split into 10 MB files and transfer it.
+destination and make it as single file.
+capture which ever got failed ....
+
+
+file1  10 MB
+file2  20 MB--- aaa.txt aab.txt--- cat aaa.txt aab.txt >>file2.txt
+vi /root/SHELL_SCRIPTS/abc.sql
+whenever SQL error exit 1;
+whenever os error  exit 2;
+set page off;
+set footer off;
+set line number=2000;
+spool /root/SHELL_SCRIPTS/abc.txt
+select * from emp, dept where emp.deptid=dept.did;
+spool off
+
+sqlplus -s username/password "XXXX"
+echo $?
+
+
+
+
+
+858146     
+
+Functions:  A function is a predefined program..
+
+
+function function_name 
+(
+)
+
+function_name () {
+operations
+}
+
+function_name;
+function_name 1 2 3 4 
+
+return  values;
+
+#!/bin/bash
+varibale_....
+send_mail ()
+{
+from=$1; To=$2; att=$3
+echo "" |mail -s "
+}
+
+DB_CON ()
+{
+sqlplus -s $1/$2@$3 <<!!
+@$4
+!!
+}
+
+S_check ()
+ {
+if [ last_stats -ne 0 ]
+then
+operations
+fi
+}
+
+DB_CON RAM RAM ABC /home/shellscripts/abc.sql
+last_stats=$?
+S_check
+send_mail abc@gamil def@abc /home/shellscripts/abc.txt
+###
+DB_CON RAM RAM ABCD /home/shellscripts/abcd.sql
+last_stats=$?
+S_check
+send_mail abc@gamil def@abc /home/shellscripts/abcd.txt
+DB_CON RAM RAM ABCDE /home/shellscripts/abcde.sql
+last_stats=$?
+S_check
+send_mail abc@gamil def@abc /home/shellscripts/abcde.txt
+
+
+
+
+
+
+
